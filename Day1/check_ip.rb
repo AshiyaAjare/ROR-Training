@@ -5,6 +5,10 @@ def check_ip(ip)
   octet2 = octet2.to_i
   octet3 = octet3.to_i
   octet4 = octet4.to_i
+  
+  if [octet1, octet2, octet3, octet4].any? {|octet| octet<0 || octet>255}
+    return "invalid IP"
+  end
 
   case octet1
   when 1..127
