@@ -1,12 +1,13 @@
 def check_grade(grade)
-  if grade >=1 && grade<=5
+  case grade
+  when 1..5
     return "Elementary"
-  elsif grade>=6 && grade<=8
+  when 6..9
     return "Middle School"
-  elsif grade>=9 && grade<=12
+  when 9..12
     return "High School"
   else
-    return "College"
+    return "college"
   end
 end
 

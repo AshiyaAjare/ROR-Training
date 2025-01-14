@@ -1,4 +1,3 @@
-
 def check_regex(input_var, type)
   case type
   when :mobile
@@ -8,7 +7,7 @@ def check_regex(input_var, type)
   when :name
     regex = /^[A-Za-z\s]+$/
   when :gender
-    regex = /^[MF]$/
+    regex = /^(M|F|m|f|Male|Female|male|female|Other|other)$/
   when :amount
     regex = /^\d+(\.\d{1,2})?$/
   else

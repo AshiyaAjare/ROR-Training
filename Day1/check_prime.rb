@@ -1,3 +1,4 @@
+=begin
 def check_prime?(num)
   if num<=1
     return false
@@ -16,6 +17,22 @@ def check_prime?(num)
     return true
   end
 end
+=end
+
+def check_prime?(num)
+  if (num<=1)
+    return false
+  else
+    (2..num/2).each do |i|
+      if (num%i==0)
+        return false
+      end
+    end
+  end
+end
+
+
+
 
 puts "Enter number to check if its prime or not: "
 
@@ -24,5 +41,5 @@ num = gets.chomp.to_i
 if check_prime?(num)
   puts "#{num} is a Prime Number."
 else
-  puts "#{num} is not a  number."
+  puts "#{num} is not a Prime number."
 end 

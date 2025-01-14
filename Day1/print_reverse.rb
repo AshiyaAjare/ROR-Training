@@ -1,3 +1,4 @@
+=begin
 def print_reverse
   alphabets = ('a'..'z').to_a
   rev_alphabets = alphabets.reverse
@@ -5,5 +6,13 @@ def print_reverse
     print char
   end
 end
+=end
+def print_reverse
+  alphabets = ('a'..'z').to_a
+  alphabets.reverse_each do |char|
+    print char
+  end
+end
+
 
 print_reverse
