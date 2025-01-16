@@ -36,7 +36,7 @@ def make_guesses(word, guess_word)
   chances = 10
 
   while chances>0 && guess_word.include?("_")
-    puts "**************************************"
+    puts"**************************************"
     puts "Current word: #{guess_word}"
     puts "You have #{chances} chances left"
 
@@ -56,13 +56,13 @@ def make_guesses(word, guess_word)
       puts "Correct guess!"
     else
       chances-=1
-      puts "Wrong guess!"
+  puts "Wrong guess!"
     end
     puts "**************************************"
   end
 
   if guess_word.include?("_")
-    puts "Sorry, you lost the game"
+  puts "Sorry, you lost the game"
     puts "The word was #{word}."
   else
     puts "Congratulations, you won!"
